@@ -1,19 +1,47 @@
-# Resort Booking
+# Resort Booking System
 
-A rebuilt version of the original Resort Booking project using React + Vite on the frontend and Express + MongoDB on the backend.
+A full-stack resort booking web application built with **React + Vite**, **Node.js + Express**, and **MongoDB**.
 
-## What changed
-- Preserves the original blue/purple login UI and resort-card style.
-- React component structure instead of one large HTML file.
-- Real registration/login with JWT and bcrypt.
-- MongoDB persistence for users and bookings.
-- Resort data stored in the backend.
-- Date-based booking conflict checking.
-- Booking history and cancellation.
-- Responsive layout and cleaner CSS.
-- Environment variables for secrets.
+## Features
 
-## Project structure
+- Responsive resort discovery interface
+- Search resorts by name, location, or description
+- Resort cards with images and details
+- Resort image preview modal
+- User registration and login
+- JWT-based authentication
+- Password hashing with bcrypt
+- Book resorts with check-in and check-out dates
+- Date-overlap availability validation
+- Booking history
+- Booking cancellation
+- MongoDB data persistence
+- Protected booking APIs
+- Responsive design for desktop and mobile
+- External resort images — no image files are required in the project
+
+## Technology Stack
+
+### Frontend
+
+- React
+- Vite
+- React Router
+- JavaScript
+- CSS
+
+### Backend
+
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT
+- bcryptjs
+- CORS
+- dotenv
+
+## Project Structure
 
 ```text
 Resort-Booking/
@@ -27,8 +55,9 @@ Resort-Booking/
 │   │   ├── App.jsx
 │   │   ├── index.css
 │   │   └── main.jsx
-│   ├── .env.example
-│   └── package.json
+│   ├── package.json
+│   └── vite.config.js
+│
 ├── backend/
 │   ├── config/
 │   ├── controllers/
@@ -36,38 +65,8 @@ Resort-Booking/
 │   ├── models/
 │   ├── routes/
 │   ├── utils/
-│   ├── .env.example
-│   ├── package.json
-│   └── server.js
+│   ├── server.js
+│   └── package.json
+│
 ├── .gitignore
 └── README.md
-```
-
-## Run locally
-
-### Backend
-
-```bash
-cd backend
-npm install
-copy .env.example .env
-npm run dev
-```
-
-Set `MONGODB_URI` and `JWT_SECRET` in `.env`.
-
-### Frontend
-
-```bash
-cd frontend
-npm install
-copy .env.example .env
-npm run dev
-```
-
-The frontend expects the API at `http://localhost:5000/api` by default.
-
-## Notes
-- No `node_modules` are included in this ZIP.
-- No real credentials are included.
-- The application can render the resort catalog without MongoDB, but authentication and persistent bookings require MongoDB.
