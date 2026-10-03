@@ -2,6 +2,14 @@
 
 A full-stack resort booking web application built with **React + Vite**, **Node.js + Express**, and **MongoDB**.
 
+## 🚀 Live Demo
+
+**[View Live Project](https://resort-booking-5zc4.onrender.com)**
+
+## 💻 Source Code
+
+**[GitHub Repository](https://github.com/saichaitanya553/Resort-Booking)**
+
 ## Features
 
 - Responsive resort discovery interface
@@ -70,3 +78,4 @@ Resort-Booking/
 │
 ├── .gitignore
 └── README.md
+```
